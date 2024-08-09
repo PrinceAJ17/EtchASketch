@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+    background: linear-gradient(90deg, #5433ff 0%, #20bdff 50%, #a5fecb 100%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* header */
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header-text{
+    font-size: 48px;
+    font-weight: 700;
+    color: #B7E3FF;
+}
+
+.sketch-screen{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    align-self: center;
+    border: solid;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: inherit;
+    width: 600px;
+    height: 600px;
+}
