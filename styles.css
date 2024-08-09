@@ -1,33 +1,39 @@
-body{
+body {
     margin: 0px;
-    background: linear-gradient(90deg, #5433ff 0%, #20bdff 50%, #a5fecb 100%);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #F0EDEE; 
+    color: #2C2C2C; 
+    font-family: 'Poppins', sans-serif;
 }
 
 /* header */
-.header{
+.header {
     display: flex;
     justify-content: center;
+    background-color: #3A3A5A; 
+    padding: 20px;
+    border-bottom: 3px solid #FFD700; 
 }
 
-.header-text{
+.header-text {
     font-size: 48px;
     font-weight: 700;
-    color: #B7E3FF;
+    color: #FFFFFF; 
 }
 
-.sketch-screen{
+.sketch-screen {
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-.container{
+
+.container {
     display: flex;
     align-self: center;
-    border: solid;
+    border: 2px solid #D4AF37; 
     overflow: hidden;
     border-radius: 25px;
-    background-color: inherit;
+    background-color: #FFFFFF; 
     width: 600px;
     height: 600px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
 }
