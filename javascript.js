@@ -3,18 +3,57 @@ const numinpt = document.querySelector("#numinpt")
 const spanItems = document.querySelectorAll(".myNum")
 const colorpicker = document.querySelector(".colorpicker")
 const resetbutton = document.querySelector(".resetbutton button").addEventListener("click", resetGrid)
-const toggleElement = document.querySelector(".toggle")
+const eraserEle = document.querySelector(".toggle")
+const randEle = document.querySelector(".toggle2")
+const gridEle = document.querySelector(".toggle3")
 
+eraserEle.addEventListener("click", ()=>{
+    const isChecked = eraserEle.getAttribute("aria-checked") === 'true'
+    eraserEle.setAttribute("aria-checked", !isChecked)
+    if(isChecked){
+        randEle.setAttribute("aria-checked", !isChecked)
+    }else{
+        randEle.setAttribute("aria-checked", isChecked)
+    }
+})
 
-toggleElement.addEventListener("click", ()=>{
-    const isChecked = toggleElement.getAttribute("aria-checked") === 'true'
-    toggleElement.setAttribute("aria-checked", !isChecked)
+randEle.addEventListener("click", ()=>{
+    const isChecked = randEle.getAttribute("aria-checked") === 'true'
+    randEle.setAttribute("aria-checked", !isChecked)
+    if(isChecked){
+        eraserEle.setAttribute("aria-checked", !isChecked)
+    }else{
+        eraserEle.setAttribute("aria-checked", isChecked)
+    }
+})
+
+gridEle.addEventListener("click", ()=>{
+    const isChecked = gridEle.getAttribute("aria-checked") === 'true'
+    gridEle.setAttribute("aria-checked", !isChecked)
+    const allDivs = document.querySelectorAll(".div1, .div2")
+    allDivs.forEach(div =>{
+        if(isChecked){
+            div.style.outline = "1px solid"
+        }
+        else{
+            div.style.outline = "none"
+        }
+    })
 })
 
 
 function changeColors(e){
-    if(toggleElement.getAttribute("aria-checked")==="true"){
+    if(eraserEle.getAttribute("aria-checked")==="true"){
         e.style.background = "white"
+    }
+    else if(randEle.getAttribute("aria-checked")==="true"){
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        e.style.background = color;
+
     }
     else{
         e.style.background = colorpicker.value
@@ -48,7 +87,6 @@ function resetGrid(){
     allDivs.forEach(div =>{
         div.style.background = "white"
     })
-    colorpicker.value = "#ffffff"
 }
 
 

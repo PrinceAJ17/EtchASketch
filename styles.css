@@ -33,14 +33,14 @@ body {
 
 }
 
-.eraser{
+.eraser, .random, .grid{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.toggle{
+.toggle, .toggle2, .toggle3{
     background: white;
     width: 132px;
     height: 70px;
@@ -51,7 +51,7 @@ body {
     cursor: pointer;
 }
 
-.toggle-circle{
+.toggle-circle, .toggle2-circle{
     background: red;
     width: 62px;
     height: 62px;
@@ -62,8 +62,27 @@ body {
     transition: left 300ms ease, transform 300ms ease, background-color 200ms ease 300ms;
 }
 
-.toggle[aria-checked=true] .toggle-circle{
+.toggle3-circle{
     background: green;
+    width: 62px;
+    height: 62px;
+    border-radius: 999px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: left 300ms ease, transform 300ms ease, background-color 200ms ease 300ms;
+}
+
+.toggle[aria-checked=true] .toggle-circle,
+.toggle2[aria-checked=true] .toggle2-circle{
+    background: green;
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+    
+}
+
+.toggle3[aria-checked=true] .toggle3-circle {
+    background: red;
     left: calc(100% - 4px);
     transform: translateX(-100%);
     
