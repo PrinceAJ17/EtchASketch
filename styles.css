@@ -29,7 +29,44 @@ body {
     overflow: hidden;
     background: linear-gradient(135deg, #FFDAC1, #B5A0E3); 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+    padding: 0px 20px 0px 20px;
 
+}
+
+.eraser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle{
+    background: white;
+    width: 132px;
+    height: 70px;
+    border: 0px;
+    border-radius: 999px;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-circle{
+    background: red;
+    width: 62px;
+    height: 62px;
+    border-radius: 999px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: left 300ms ease, transform 300ms ease, background 200ms ease 300ms;
+}
+
+.toggle[aria-checked=true] .toggle-circle{
+    background: green;
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+    
 }
 .sketch-screen {
     display: flex;

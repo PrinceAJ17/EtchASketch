@@ -18,8 +18,24 @@
     
         </div>
         <div class="user-input">
-            <label for="numinpt">Choose a valid number from 0-100</label>
-            <input id="numinpt" type="number" min="0" max="100">
+            <div class="colorUI">
+                Pick a color <input class="colorpicker" type="color">
+            </div>
+            <div class="resetbutton">
+                <button>RESET</button>
+            </div>
+            <div class="eraser">
+                Eraser
+                <button class="toggle" role="switch" aria-checked="false" tabindex="0">
+                    <div class="toggle-circle">
+
+                    </div>
+                </button>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="16" id="numinpt">
+                <p><span class="myNum">16</span> X <span class="myNum">16</span></p>
+            </div>
         </div>
     </div>
 </body>
