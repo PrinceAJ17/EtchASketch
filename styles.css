@@ -59,7 +59,7 @@ body {
     position: absolute;
     left: 4px;
     top: 4px;
-    transition: left 300ms ease, transform 300ms ease, background 200ms ease 300ms;
+    transition: left 300ms ease, transform 300ms ease, background-color 200ms ease 300ms;
 }
 
 .toggle[aria-checked=true] .toggle-circle{

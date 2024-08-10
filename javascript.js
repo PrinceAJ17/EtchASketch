@@ -13,7 +13,12 @@ toggleElement.addEventListener("click", ()=>{
 
 
 function changeColors(e){
-    e.style.background = colorpicker.value
+    if(toggleElement.getAttribute("aria-checked")==="true"){
+        e.style.background = "white"
+    }
+    else{
+        e.style.background = colorpicker.value
+    }
 }
 
 function createGrid(){
