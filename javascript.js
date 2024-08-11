@@ -7,6 +7,15 @@ const eraserEle = document.querySelector(".toggle")
 const randEle = document.querySelector(".toggle2")
 const gridEle = document.querySelector(".toggle3")
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    createGrid(parseInt(numinpt.value))
+})
+
+numinpt.addEventListener("input", () => {
+    gridEle.setAttribute("aria-checked", "false")
+    createGrid(parseInt(numinpt.value))
+})
+
 eraserEle.addEventListener("click", ()=>{
     const isChecked = eraserEle.getAttribute("aria-checked") === 'true'
     eraserEle.setAttribute("aria-checked", !isChecked)
@@ -40,6 +49,7 @@ gridEle.addEventListener("click", ()=>{
         }
     })
 })
+
 
 
 function changeColors(e){
@@ -90,13 +100,7 @@ function resetGrid(){
 }
 
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    createGrid(parseInt(numinpt.value))
-})
 
-numinpt.addEventListener("input", () => {
-    createGrid(parseInt(numinpt.value))
-})
 
 
 

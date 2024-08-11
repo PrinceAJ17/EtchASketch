@@ -14,6 +14,8 @@ body {
     border-bottom: 3px solid #FFD700; 
 }
 
+
+
 .header-text {
     font-size: 48px;
     font-weight: 700;
@@ -23,14 +25,53 @@ body {
 /* screen */
 
 .user-input{
-    border: 2px solid #D4AF37; 
+    border: 2px solid #D4AF37;
     height: 600px;
+    width: 200px;
     border-radius: 25px;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFDAC1, #B5A0E3); 
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #FFDAC1, #B5A0E3);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     padding: 0px 20px 0px 20px;
+    flex-direction: column;
+}
 
+.colorUI{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.colorpicker{
+    width: auto;
+    height: 100px;
+}
+
+.resetbutton{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.resetbutton button{
+    cursor: pointer;
+    border: 0px;
+    border-radius: 999px;
+    
+}
+
+button:hover {
+    margin-top: 0px;
+    -moz-box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    box-shadow: 0px 0px 4px 1px  grey;
+}
+
+.slidecontainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .eraser, .random, .grid{
